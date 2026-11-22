@@ -1,0 +1,102 @@
+/* Continuous Owl-Carousel Marquee matching propelleraero.com .platform-stories */
+@keyframes propellerLogoMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.platform-stories .owl-carousel .owl-stage-outer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.platform-stories .owl-carousel .owl-stage {
+  display: flex !important;
+  align-items: center;
+  width: max-content;
+  animation: propellerLogoMarquee 38s linear infinite;
+}
+
+.platform-stories .owl-carousel .owl-stage:hover {
+  animation-play-state: paused;
+}
+
+.platform-stories .owl-carousel .owl-item {
+  float: none !important;
+  margin-right: 60px !important;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.platform-stories .owl-carousel .owl-item img {
+  height: 50px !important;
+  width: auto !important;
+  display: block;
+}
+
+/* Ensure header buttons and links with onClick cursor pointer */
+.page-header-new a,
+.l-main a,
+.l-footer a {
+  cursor: pointer;
+}
+
+/* Express Interactive Modal Overlay (Matches Propeller Light/Yellow Aesthetic) */
+.edls-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(8, 17, 29, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.edls-modal-card {
+  background: #ffffff;
+  color: #08111D;
+  border-radius: 20px;
+  max-width: 1080px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(8, 17, 29, 0.3);
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+}
+
+.edls-floating-dock {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 998;
+  background: #08111D;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 10px 30px rgba(8, 17, 29, 0.28);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.edls-floating-dock button {
+  border: none;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
